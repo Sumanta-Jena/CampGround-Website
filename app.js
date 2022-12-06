@@ -19,11 +19,11 @@ const User = require('./models/user')
 const userRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds')
 const reviewRoutes = require('./routes/reviews')
-const dbUrl = "mongodb+srv://harsh:%40Harsh2502@cluster0.pbfqw5x.mongodb.net/test?retryWrites=true&w=majority"
+const dbUrl = process.env.DB_URL;
 
 //dbUrl
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+mongoose.connect('mongodb+srv://Sumo:hello@cluster2.pdtpxlm.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
